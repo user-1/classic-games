@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <style>
+
+table {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+}
+
+tr{
+    padding: 0px;
+    margin: 0px;
+}
+
+td {
+    width: 45px;
+    height: 45px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.w { /* white cell background color */
+    background-color: white; 
+}
+
+.b { /* black cell background color */
+    background-color: gray;
+}
+
+.center {
+    margin: auto;
+    padding: 0px;
+    width: 360px;
+}
+
+
+
+.piece {
+    margin: 0px;
+    padding : 0px;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  </head>
+  <body>
+    <table id="board" class="center">
+      <tr>
+	<td id="a-8" class="square w"><span class="piece black-rook"><img src="assets/rook-black.svg"/></span></td>
+	<td id="b-8" class="square b"><span class="piece black-knight"><img src="assets/knight-black.svg"/></span></td>
+	<td id="c-8" class="square w"><span class="piece black-bishop"><img src="assets/bishop-black.svg"/></span></td>
+	<td id="d-8" class="square b"><span class="piece black-queen"><img src="assets/queen-black.svg"/></span></td>
+	<td id="e-8" class="square w"><span class="piece black-king"><img src="assets/king-black.svg"/></span></td>
+	<td id="f-8" class="square b"><span class="piece black-bishop"><img src="assets/bishop-black.svg"/></span></td>
+	<td id="g-8" class="square w"><span class="piece black-knight"><img src="assets/knight-black.svg"/></span></td>
+	<td id="h-8" class="square b"><span class="piece black-rook"><img src="assets/rook-black.svg"/></span></td>        
+      </tr>
+      <tr>
+	<td id="a-7" class="square b"><span class="piece black-pawn"><img src="assets/pawn-black.svg"/></span></td>
+	<td id="b-7" class="square w"><span class="piece black-pawn"><img src="assets/pawn-black.svg"/></span></td>
+	<td id="c-7" class="square b"><span class="piece black-pawn"><img src="assets/pawn-black.svg"/></span></td>
+	<td id="d-7" class="square w"><span class="piece black-pawn"><img src="assets/pawn-black.svg"/></span></td>
+	<td id="e-7" class="square b"><span class="piece black-pawn"><img src="assets/pawn-black.svg"/></span></td>
+	<td id="f-7" class="square w"><span class="piece black-pawn"><img src="assets/pawn-black.svg"/></span></td>
+	<td id="g-7" class="square b"><span class="piece black-pawn"><img src="assets/pawn-black.svg"/></span></td>
+	<td id="h-7" class="square w"><span class="piece black-pawn"><img src="assets/pawn-black.svg"/></span></td>
+      </tr>
+      <tr>
+	<td id="a-6" class="square w"></td>
+	<td id="b-6" class="square b"></td>
+	<td id="c-6" class="square w"></td>
+	<td id="d-6" class="square b"></td>
+	<td id="e-6" class="square w"></td>
+	<td id="f-6" class="square b"></td>
+	<td id="g-6" class="square w"></td>
+	<td id="h-6" class="square b"></td>
+      </tr>
+      <tr>
+	<td id="a-5" class="square b"></td>
+	<td id="b-5" class="square w"></td>
+	<td id="c-5" class="square b"></td>
+	<td id="d-5" class="square w"></td>
+	<td id="e-5" class="square b"></td>
+	<td id="f-5" class="square w"></td>
+	<td id="g-5" class="square b"></td>
+	<td id="h-5" class="square w"></td>
+      </tr>
+      <tr>
+	<td id="a-4" class="square w"></td>
+	<td id="b-4" class="square b"></td>
+	<td id="c-4" class="square w"></td>
+	<td id="d-4" class="square b"></td>
+	<td id="e-4" class="square w"></td>
+	<td id="f-4" class="square b"></td>
+	<td id="g-4" class="square w"></td>
+	<td id="h-4" class="square b"></td>
+      </tr>
+      <tr>
+	<td id="a-3" class="square b"></td>
+	<td id="b-3" class="square w"></td>
+	<td id="c-3" class="square b"></td>
+	<td id="d-3" class="square w"></td>
+	<td id="e-3" class="square b"></td>
+	<td id="f-3" class="square w"></td>
+	<td id="g-3" class="square b"></td>
+	<td id="h-3" class="square w"></td>
+      </tr>
+      <tr>
+	<td id="a-2" class="square w"><span class="piece white-pawn"><img src="assets/pawn-white.svg"/></span></td>
+	<td id="b-2" class="square b"><span class="piece white-pawn"><img src="assets/pawn-white.svg"/></span></td>
+	<td id="c-2" class="square w"><span class="piece white-pawn"><img src="assets/pawn-white.svg"/></span></td>
+	<td id="d-2" class="square b"><span class="piece white-pawn"><img src="assets/pawn-white.svg"/></span></td>
+	<td id="e-2" class="square w"><span class="piece white-pawn"><img src="assets/pawn-white.svg"/></span></td>
+	<td id="f-2" class="square b"><span class="piece white-pawn"><img src="assets/pawn-white.svg"/></span></td>
+	<td id="g-2" class="square w"><span class="piece white-pawn"><img src="assets/pawn-white.svg"/></span></td>
+	<td id="h-2" class="square b"><span class="piece white-pawn"><img src="assets/pawn-white.svg"/></span></td>
+      </tr>
+      <tr>
+	<td id="a-1" class="square b"><span class="piece white-rook"><img src="assets/rook-white.svg"/></span></td>
+	<td id="b-1" class="square w"><span class="piece white-knight"><img src="assets/knight-white.svg"/></span></td>
+	<td id="c-1" class="square b"><span class="piece white-bishop"><img src="assets/bishop-white.svg"/></span></td>
+	<td id="d-1" class="square w"><span class="piece white-queen"><img src="assets/queen-white.svg"/></span></td>
+	<td id="e-1" class="square b"><span class="piece white-king"><img src="assets/king-white.svg"/></span></td>    
+	<td id="f-1" class="square w"><span class="piece white-bishop"><img src="assets/bishop-white.svg"/></span></td>
+	<td id="g-1" class="square b"><span class="piece white-knight"><img src="assets/knight-white.svg"/></span></td>
+	<td id="h-1" class="square w"><span class="piece white-rook"><img src="assets/rook-white.svg"/></span></td>
+      </tr>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Offline fallback for dev -->
+    <script type="text/javascript">
+      window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js">\x3C/script>')
+      if(!window.jQuery.ui){
+        document.write('<script src="js/jquery-ui.min.js">\x3C/script>')
+        document.write('<link rel="stylesheet" href="css/jquery-ui.min.css">')	     
+      }
+    </script>
+
+    <script src="js/chess.js"></script>
+  </body>
+</html>
